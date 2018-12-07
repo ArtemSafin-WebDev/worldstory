@@ -1,0 +1,10 @@
+.info-panel {
+  background-color: $primary-color;
+  color: white;
+  &__content {
+    @include container();
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+  }
+}

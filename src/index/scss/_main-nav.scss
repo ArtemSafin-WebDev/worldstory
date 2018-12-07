@@ -1,0 +1,23 @@
+.main-nav {
+  margin: 0 auto;
+  &__list {
+    display: flex;
+  }
+  &__link {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 22px;
+    transition: color .2s;
+    &:link,
+    &:visited {
+      color: black;
+    }
+    &:focus,
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.latest {
+  @include container();
+  height: 800px;
+  margin-top: 42px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 428px;
+  grid-template-rows: repeat(3, minmax(246px, auto));
+  grid-auto-rows: minmax(246px, auto);
+  @media screen and (max-width: $small-desktop-width) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.latest__card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #3b3b3a, transparent 76px);
+  &-heading {
+    font-size: 20px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: auto;
+  }
+  &-paragraph {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  &-publication-date {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+
+  &-tags-list {
+    display: flex;
+    align-self: flex-end;
+    &-item {
+      margin-right: 9px;
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &-tag {
+    display: block;
+    color: white;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 2px 12px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    &:link,
+    &:visited {
+      color: white;
+    }
+    &:focus,
+    &:hover {
+      background-color: black;
+    }
+  }
+
+  &-row-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  &-date-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &-icon {
+    fill: white;
+    margin-right: 16px;
+  }
+  &-divider {
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+    display: block;
+    margin: 0 15px;
+  }
+
+  &:nth-child(1) {
+    background-color: orange;
+  }
+  &:nth-child(2) {
+    background-color: olive;
+  }
+  &:nth-child(3) {
+    background-color: blueviolet;
+  }
+  &:nth-child(4) {
+    background-color: palevioletred;
+  }
+}
+
+.latest__card--large {
+  background-image: linear-gradient(to top, $primary-color 0px, $primary-color 8px, transparent 8px, transparent 100%), linear-gradient(to top, #3b3b3a 0px,transparent 177px);
+  padding: 56px;
+  grid-column-start: span 2;
+  grid-row-start: span 3;
+  .latest__card-heading {
+    font-size: 30px;
+  }
+  .latest__card-tags-list {
+    align-self: center;
+  }
+}

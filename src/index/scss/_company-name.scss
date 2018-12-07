@@ -1,0 +1,16 @@
+.company-name {
+  font-weight: 900;
+  font-size: 31px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: black;
+  white-space: nowrap;
+  padding: 22px 0;
+  &:link,
+  &:visited {
+    color: black;
+  }
+  &__purple-text {
+    color: $primary-color;
+  }
+}

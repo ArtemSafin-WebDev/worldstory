@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  &__item {
+    margin-right: 26px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    &:focus .social__icon,
+    &:hover .social__icon {
+      fill: black;
+    }
+  }
+  &__icon {
+    fill: $primary-color;
+    transition: fill 0.2s;
+  }
+}

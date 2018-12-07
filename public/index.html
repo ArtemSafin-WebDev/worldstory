@@ -1,17 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>worldstory</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900"
+      rel="stylesheet"
+    />
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <header class="page-header">
+      <section class="info-panel">
+        <div class="info-panel__content">
+          <div class="day-of-the-week">
+            <svg
+              class="day-of-the-week__icon"
+              aria-hidden="true"
+              width="22"
+              height="22"
+            >
+              <use xlink:href="images/icons/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span class="day-of-the-week__text">03. June 2019</span>
+          </div>
+          <div class="city-and-weather">
+            <svg
+              class="city-and-weather__icon"
+              aria-hidden="true"
+              width="22"
+              height="22"
+            >
+              <use xlink:href="images/icons/sprite.svg#icon-sun"></use>
+            </svg>
+            <span class="city-and-weather__text"> New York </span>
+          </div>
+        </div>
+      </section>
+      <section class="nav-panel">
+        <div class="nav-panel__content">
+          <a href="index.html" class="company-name">
+            <span class="company-name__purple-text"> World </span> Story
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item">
+                <a href="#" class="main-nav__link">News</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#" class="main-nav__link">Fashion</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#" class="main-nav__link">Lifestyle</a>
+              </li>
+              <li class="main-nav__list-item">
+                <a href="#" class="main-nav__link">Travel</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use xlink:href="images/icons/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use xlink:href="images/icons/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use xlink:href="images/icons/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use
+                    xlink:href="images/icons/sprite.svg#icon-pinterest"
+                  ></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use xlink:href="images/icons/sprite.svg#icon-rss"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg
+                  class="social__icon"
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                >
+                  <use xlink:href="images/icons/sprite.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <main class="page-main">
+      <section class="latest">
+        <div class="latest__card latest__card--large">
+          <h3 class="latest__card-heading">Latest from web for you</h3>
+          <div class="latest__card-row-wrapper">
+            <ul class="latest__card-tags-list">
+              <li class="latest__card-tags-list-item">
+                <a href="#" class="latest__card-tag">Fashion</a>
+              </li>
+              <li class="latest__card-tags-list-item">
+                <a href="#" class="latest__card-tag">Lifestyle</a>
+              </li>
+            </ul>
+            <span class="latest__card-divider"></span>
+            <span class="latest__card-publication-date">03. June 2019</span>
+          </div>
+          <p class="latest__card-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation .
+          </p>
+        </div>
+        <div class="latest__card">
+          <ul class="latest__card-tags-list">
+            <li class="latest__card-tags-list-item">
+              <a href="#" class="latest__card-tag">Fashion</a>
+            </li>
+          </ul>
+          <h3 class="latest__card-heading">Latest from web for you</h3>
+          <div class="latest__card-date-wrapper">
+            <svg
+              class="latest__card-icon"
+              aria-hidden="true"
+              width="16"
+              height="16"
+            >
+              <use xlink:href="images/icons/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span class="latest__card-publication-date">03. June 2019</span>
+          </div>
+        </div>
+        <div class="latest__card">
+          <ul class="latest__card-tags-list">
+            <li class="latest__card-tags-list-item">
+              <a href="#" class="latest__card-tag">Fashion</a>
+            </li>
+          </ul>
+          <h3 class="latest__card-heading">Latest from web for you</h3>
+          <div class="latest__card-date-wrapper">
+            <svg
+              class="latest__card-icon"
+              aria-hidden="true"
+              width="16"
+              height="16"
+            >
+              <use xlink:href="images/icons/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span class="latest__card-publication-date">03. June 2019</span>
+          </div>
+        </div>
+        <div class="latest__card">
+          <ul class="latest__card-tags-list">
+            <li class="latest__card-tags-list-item">
+              <a href="#" class="latest__card-tag">Fashion</a>
+            </li>
+          </ul>
+          <h3 class="latest__card-heading">Latest from web for you</h3>
+          <div class="latest__card-date-wrapper">
+            <svg
+              class="latest__card-icon"
+              aria-hidden="true"
+              width="16"
+              height="16"
+            >
+              <use xlink:href="images/icons/sprite.svg#icon-calendar"></use>
+            </svg>
+            <span class="latest__card-publication-date">03. June 2019</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__content">
+        <div class="page-footer__card page-footer__card--long">
+          <h2 class="page-footer__card-heading">
+            About us
+          </h2>
+          <p class="page-footer__card-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          </p>
+        </div>
+        <div class="page-footer__card page-footer__card--long">
+          <h2 class="page-footer__card-heading">
+            Popular posts
+          </h2>
+          <p class="page-footer__card-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          </p>
+        </div>
+        <div class="page-footer__card">
+          <h2 class="page-footer__card-heading">
+            Newsletter
+          </h2>
+          <p class="page-footer__card-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          </p>
+        </div>
+        <div class="page-footer__card">
+          <h2 class="page-footer__card-heading">
+            Categories
+          </h2>
+          <p class="page-footer__card-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+          </p>
+        </div>
+      </section>
+      <section class="page-footer__copyright">
+        <div class="page-footer__copyright-inner">
+          <p class="page-footer__copyright-text">
+              © Copyright by Worldstory 2018. All rights reserved.
+          </p>
+        </div>
+      </section>
+    </footer>
     <noscript>
-      <strong>We're sorry but worldstory doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but worldstory doesn't work properly without JavaScript
+        enabled. Please enable it to continue.</strong
+      >
     </noscript>
-    <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

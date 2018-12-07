@@ -1,0 +1,15 @@
+.city-and-weather {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  &__text {
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &__icon {
+    fill: white;
+    margin-right: 18px;
+  }
+}

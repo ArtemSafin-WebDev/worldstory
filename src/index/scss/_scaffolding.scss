@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-grey;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+::selection {
+  background: $primary-color;
+  color: #fff;
+}
