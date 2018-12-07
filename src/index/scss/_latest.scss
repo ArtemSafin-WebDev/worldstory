@@ -1,12 +1,11 @@
 .latest {
   @include container();
-  height: 800px;
   margin-top: 42px;
   color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr) 428px;
-  grid-template-rows: repeat(3, minmax(246px, auto));
-  grid-auto-rows: minmax(246px, auto);
+  grid-template-rows: repeat(3, minmax(248px, auto));
+  grid-auto-rows: minmax(248px, auto);
   @media screen and (max-width: $small-desktop-width) {
     padding-left: 0px;
     padding-right: 0px;
@@ -17,6 +16,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  background-color: $dark-grey;
   background-image: linear-gradient(to top, #3b3b3a, transparent 76px);
   &-heading {
     font-size: 20px;
@@ -24,8 +24,8 @@
     text-transform: uppercase;
     letter-spacing: 0.25px;
     font-weight: 700;
-    margin-bottom: 5px;
     margin-top: auto;
+    margin-bottom: 2px;
   }
   &-paragraph {
     font-size: 17px;
@@ -37,6 +37,7 @@
     font-size: 15px;
     line-height: 25px;
     letter-spacing: 1px;
+    
   }
 
   &-tags-list {
@@ -78,6 +79,7 @@
   &-date-wrapper {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
   }
 
   &-icon {
@@ -92,18 +94,18 @@
     margin: 0 15px;
   }
 
-  &:nth-child(1) {
-    background-color: orange;
-  }
-  &:nth-child(2) {
-    background-color: olive;
-  }
-  &:nth-child(3) {
-    background-color: blueviolet;
-  }
-  &:nth-child(4) {
-    background-color: palevioletred;
-  }
+  // &:nth-child(1) {
+  //   background-color: orange;
+  // }
+  // &:nth-child(2) {
+  //   background-color: olive;
+  // }
+  // &:nth-child(3) {
+  //   background-color: blueviolet;
+  // }
+  // &:nth-child(4) {
+  //   background-color: palevioletred;
+  // }
 }
 
 .latest__card--large {
@@ -116,5 +118,8 @@
   }
   .latest__card-tags-list {
     align-self: center;
+  }
+  .latest__card-paragraph {
+    margin-bottom: 10px;
   }
 }
