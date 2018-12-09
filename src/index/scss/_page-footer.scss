@@ -4,7 +4,7 @@
   color: white;
   &__content {
     @include container();
-    padding-top: 110px;
+    padding-top: 80px;
     padding-bottom: 105px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -78,6 +78,7 @@
 .page-footer__contacts {
   &-list {
     border-bottom: 1px solid #454545;
+    margin-bottom: 40px;
     &-item {
       display: flex;
       align-items: center;

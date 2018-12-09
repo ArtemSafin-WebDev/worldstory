@@ -17,3 +17,19 @@
     transition: fill 0.2s;
   }
 }
+
+
+.social--footer {
+  
+  .social__link {
+    &:focus .social__icon,
+    &:hover .social__icon {
+      fill: white;
+    }
+  }
+
+  .social__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

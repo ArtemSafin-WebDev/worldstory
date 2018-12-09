@@ -1,0 +1,314 @@
+.interesting {
+  background-color: #fff;
+  color: black;
+  box-shadow: 0px 5px 18px rgba(black, .05);
+  &__inner {
+    @include container();
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+    grid-gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.interesting__latest {
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+  &-main-heading {
+    font-size: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 6px;
+      background-color: #d5d5d5;
+      background-image: linear-gradient(
+        to right,
+        $primary-color 0px,
+        $primary-color 45px,
+        #d5d5d5 45px,
+        #d5d5d5 100%
+      );
+      margin-top: 15px;
+    }
+  }
+  &-list {
+    &-item {
+      padding: 46px 0px;
+      border-bottom: 1px solid #c7c7c7;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: $small-desktop-width) {
+        align-items: flex-start;
+      }
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+  &-post-image-container {
+    background-color: $primary-color;
+    width: 320px;
+    height: 228px;
+    flex-shrink: 0;
+    margin-right: 44px;
+    position: relative;
+  }
+  &-post-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-post-description {
+    width: 50%;
+    flex-grow: 1;
+  }
+  &-post-date {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  &-post-row-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  &-post-heading {
+    font-size: 26px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.25px;
+    margin-bottom: 5px;
+  }
+  &-post-paragraph {
+    font-size: 20px;
+    line-height: 30px;
+    color: #8e8e8e;
+  }
+  &-post-tags-list {
+    margin-right: 25px;
+    &-item {
+      margin-right: 9px;
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+  }
+  &-post-tag {
+    display: block;
+    color: white;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 2px 12px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    &:link,
+    &:visited {
+      color: white;
+    }
+    &:focus,
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+.interesting__news {
+  &-main-heading {
+    font-size: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 46px;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 6px;
+      background-color: #d5d5d5;
+      background-image: linear-gradient(
+        to right,
+        $primary-color 0px,
+        $primary-color 45px,
+        #d5d5d5 45px,
+        #d5d5d5 100%
+      );
+      margin-top: 15px;
+    }
+  }
+  &-list {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-image-container {
+    width: 80px;
+    height: 80px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  &-description {
+    width: 50%;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-paragraph {
+    font-size: 18px;
+    line-height: 22px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  &-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid black;
+    transition: color 0.2s, border 0.2s;
+    transform: skewX(-20deg);
+    > span {
+      display: inline-block;
+      transform: skewX(20deg);
+    }
+    &:link,
+    &:visited {
+      color: black;
+    }
+    &:focus,
+    &:hover {
+      border: 2px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+  &-date {
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid black;
+    transition: color 0.2s, border 0.2s;
+    transform: skewX(-20deg);
+    margin-left: 4px;
+    // letter-spacing: 1px;
+    > span {
+      display: inline-block;
+      transform: skewX(20deg);
+    }
+    &:link,
+    &:visited {
+      color: black;
+    }
+    &:focus,
+    &:hover {
+      border: 2px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+.interesting__releases {
+  &-main-heading {
+    font-size: 40px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 48px;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 6px;
+      background-color: #d5d5d5;
+      background-image: linear-gradient(
+        to right,
+        $primary-color 0px,
+        $primary-color 45px,
+        #d5d5d5 45px,
+        #d5d5d5 100%
+      );
+      margin-top: 15px;
+    }
+  }
+}
+.interesting__releases-card {
+  &-heading {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &-paragraph {
+    margin-bottom: 20px;
+  }
+  &-image-container {
+    width: 100%;
+    background-color: $primary-color;
+    position: relative;
+    padding-top: 60%;
+  }
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &-link {
+    padding: 7px 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: $primary-color;
+    margin-top: auto;
+    margin-left: auto;
+    color: white;
+    transition: background-color 0.3s;
+    &:link,
+    &:visited {
+      color: white;
+    }
+    &:focus,
+    &:hover {
+      background-color: #242424;
+    }
+  }
+  &-description {
+    width: 92%;
+    margin: 0 auto;
+    padding: 25px;
+    padding-top: 20px;
+    margin-top: -60px;
+    background-color: #fff; // border: 2px solid $primary-color;
+    box-shadow: 0px 0px 18px rgba(black, 0.18);
+    position: relative;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+  }
+}
