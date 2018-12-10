@@ -25,7 +25,7 @@
     letter-spacing: 0.25px;
     font-weight: 700;
     margin-top: auto;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
   }
   &-paragraph {
     font-size: 17px;
@@ -67,7 +67,7 @@
     }
     &:focus,
     &:hover {
-      background-color: black;
+      background-color: #242424;
     }
   }
 
@@ -94,18 +94,23 @@
     margin: 0 15px;
   }
 
-  // &:nth-child(1) {
-  //   background-color: orange;
-  // }
-  // &:nth-child(2) {
-  //   background-color: olive;
-  // }
-  // &:nth-child(3) {
-  //   background-color: blueviolet;
-  // }
-  // &:nth-child(4) {
-  //   background-color: palevioletred;
-  // }
+  &-link {
+    text-transform: uppercase;
+    margin-left: auto;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    background-color: $primary-color;
+    transition: background-color .2s;
+    &:link,
+    &:visited {
+      color: white;
+    }
+    &:focus,
+    &:hover {
+      background-color: #242424;
+    }
+  }
+
 }
 
 .latest__card--large {
