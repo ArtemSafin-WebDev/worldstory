@@ -1,7 +1,33 @@
 .main-nav {
   margin: 0 auto;
+  @media screen and (max-width: $mobile-width) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s, transform 0.3s, visibility 0s linear 300ms;
+    display: none;
+  }
   &__list {
     display: flex;
+    @media screen and (max-width: $mobile-width) {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto;
+    }
+    &-item {
+      @media screen and (max-width: $mobile-width) {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   &__link {
     font-weight: bold;
@@ -10,7 +36,11 @@
     text-transform: uppercase;
     display: block;
     padding: 0 22px;
-    transition: color .2s;
+    transition: color 0.2s;
+    @media screen and (max-width: $mobile-width) {
+      font-size: 35px;
+      line-height: 1.6;
+    }
     &:link,
     &:visited {
       color: black;

@@ -1,5 +1,8 @@
 .social {
   display: flex;
+  @media screen and (max-width: $laptop-width) {
+    display: none;
+  }
   &__item {
     margin-right: 26px;
     &:last-of-type {

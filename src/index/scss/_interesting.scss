@@ -1,27 +1,45 @@
 .interesting {
   background-color: #fff;
   color: black;
-  box-shadow: 0px 5px 18px rgba(black, .05);
+  box-shadow: 0px 5px 18px rgba(black, 0.05);
   &__inner {
     @include container();
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, minmax(300px, 1fr));
+    grid-template-areas: "l n" "l r";
     grid-gap: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media screen and (max-width: $laptop-width) {
+      grid-template-columns: 1fr 1fr;
+      // grid-template-rows: repeat(2, auto);
+      grid-template-rows: auto;
+      grid-gap: 30px;
+      padding-bottom: 80px;
+      grid-template-areas: "l l" "n r";
+    }
+    @media screen and (max-width: $tablet-width) {
+      grid-gap: 20px;
+      grid-row-gap: 40px;
+      grid-template-areas: "l l" "n n" "r r";
+      // grid-template-rows: repeat(3, auto);
+      grid-template-rows: auto;
+    }
   }
 }
 
 .interesting__latest {
-  grid-column-start: span 1;
-  grid-row-start: span 2;
+  grid-area: l;
   &-main-heading {
     font-size: 40px;
     line-height: 1.6;
     letter-spacing: 0.25px;
     text-transform: uppercase;
     font-weight: 900;
+    @media screen and (max-width: $laptop-width) {
+      margin-bottom: 40px;
+    }
     &::after {
       content: '';
       display: block;
@@ -39,14 +57,27 @@
     }
   }
   &-list {
+    @media screen and (max-width: $laptop-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+    }
+    @media screen and (max-width: $tablet-width) {
+      grid-gap: 20px;
+    }
     &-item {
       padding: 46px 0px;
       border-bottom: 1px solid #c7c7c7;
       display: flex;
       align-items: center;
-      
       @media screen and (max-width: $small-desktop-width) {
         align-items: flex-start;
+      }
+      @media screen and (max-width: $laptop-width) {
+        flex-direction: column;
+        border-bottom: none;
+        padding: 0;
+        // padding-top: 30px;
       }
       &:last-of-type {
         border-bottom: none;
@@ -60,6 +91,12 @@
     flex-shrink: 0;
     margin-right: 44px;
     position: relative;
+    @media screen and (max-width: $laptop-width) {
+      width: 100%;
+      height: auto;
+      padding-top: 80%;
+      margin-bottom: 20px;
+    }
   }
   &-post-image {
     position: absolute;
@@ -74,6 +111,9 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: $laptop-width) {
+      width: 100%;
+    }
   }
   &-post-date {
     text-transform: uppercase;
@@ -85,6 +125,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    @media screen and (max-width: $laptop-width) {
+      margin-bottom: 15px;
+    }
   }
   &-post-heading {
     font-size: 26px;
@@ -92,18 +135,31 @@
     text-transform: uppercase;
     letter-spacing: 0.25px;
     margin-bottom: 5px;
+    @media screen and (max-width: $laptop-width) {
+      margin-bottom: 15px;
+    }
   }
   &-post-paragraph {
     font-size: 20px;
     line-height: 30px;
     color: #8e8e8e;
+    @media screen and (max-width: $laptop-width) {
+      margin-bottom: 15px;
+    }
   }
   &-post-link {
     font-size: 20px;
     line-height: 30px;
     font-weight: 700;
     text-decoration: underline;
-    transition: color .2s;
+    transition: color 0.2s;
+    align-self: flex-start;
+    @media screen and (max-width: $laptop-width) {
+      border: 2px solid $primary-color;
+      text-decoration: none;
+      padding: 8px 22px;
+      align-self: flex-end;
+    }
     &:link,
     &:visited {
       color: black;
@@ -143,6 +199,7 @@
   }
 }
 .interesting__news {
+  grid-area: n;
   &-main-heading {
     font-size: 40px;
     line-height: 1.6;
@@ -184,6 +241,14 @@
     overflow: hidden;
     flex-shrink: 0;
     margin-right: 20px;
+    @media screen and (max-width: $laptop-width) {
+      width: 100px;
+      height: 100px;
+    }
+    @media screen and (max-width: $tablet-width) {
+      width: 120px;
+      height: 120px;
+    }
   }
   &-description {
     width: 50%;
@@ -197,6 +262,10 @@
     color: #8e8e8e;
     margin-bottom: 10px;
     width: 100%;
+    @media screen and (max-width: $laptop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   &-link {
     text-transform: uppercase;
@@ -206,6 +275,10 @@
     border: 2px solid black;
     transition: color 0.2s, border 0.2s;
     transform: skewX(-20deg);
+    @media screen and (max-width: $laptop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
     > span {
       display: inline-block;
       transform: skewX(20deg);
@@ -229,7 +302,10 @@
     transition: color 0.2s, border 0.2s;
     transform: skewX(-20deg);
     margin-left: 4px;
-    // letter-spacing: 1px;
+    @media screen and (max-width: $laptop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
     > span {
       display: inline-block;
       transform: skewX(20deg);
@@ -246,6 +322,12 @@
   }
 }
 .interesting__releases {
+  
+  grid-area: r;
+  @media screen and (max-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   &-main-heading {
     font-size: 40px;
     line-height: 1.6;
@@ -253,6 +335,10 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 48px;
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: 60px;
+      width: 100%;
+    }
     &::after {
       content: '';
       display: block;
@@ -271,21 +357,42 @@
   }
 }
 .interesting__releases-card {
+  @media screen and (max-width: $laptop-width) {
+    width: 100%;
+    margin-top: 0;
+    
+  }
+  @media screen and (max-width: $tablet-width) {
+    width: 50%;
+    border-left: 6px solid $primary-color;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: $mobile-width) {
+    width: 100%;
+  }
   &-heading {
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.25px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    @media screen and (max-width: $laptop-width) {
+      font-size: 26px;
+      line-height: 1.4;
+    }
   }
   &-paragraph {
     margin-bottom: 20px;
+    @media screen and (max-width: $laptop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   &-image-container {
     width: 100%;
     background-color: $primary-color;
     position: relative;
-    padding-top: 60%;
+    padding-top: 70%;
   }
   &-image {
     position: absolute;
@@ -307,6 +414,11 @@
     margin-left: auto;
     color: white;
     transition: background-color 0.3s;
+    @media screen and (max-width: $laptop-width) {
+      font-size: 22px;
+      line-height: 1.4;
+      padding: 10px 26px;
+    }
     &:link,
     &:visited {
       color: white;
@@ -322,11 +434,18 @@
     padding: 25px;
     padding-top: 20px;
     margin-top: -60px;
-    background-color: #fff; 
+    background-color: #fff;
     box-shadow: 0px 0px 18px rgba(black, 0.18);
     position: relative;
     z-index: 80;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: $laptop-width) {
+      margin-top: 0px;
+      box-shadow: none;
+      width: 100%;
+      background-color: #f1f1f1;
+
+    }
   }
 }
