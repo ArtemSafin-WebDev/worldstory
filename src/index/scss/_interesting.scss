@@ -26,6 +26,11 @@
       // grid-template-rows: repeat(3, auto);
       grid-template-rows: auto;
     }
+    @media screen and (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      grid-template-areas: "l" "n" "r";
+    }
   }
 }
 
@@ -64,6 +69,10 @@
     }
     @media screen and (max-width: $tablet-width) {
       grid-gap: 20px;
+    }
+    @media screen and (max-width: $mobile-width) {
+      grid-template-columns: 1fr;
+      grid-gap: 60px;
     }
     &-item {
       padding: 46px 0px;
@@ -120,6 +129,9 @@
     font-size: 15px;
     line-height: 25px;
     letter-spacing: 1px;
+    @media screen and (max-width: $mobile-width) {
+      margin-left: auto;
+    }
   }
   &-post-row-wrapper {
     display: flex;
@@ -145,6 +157,10 @@
     color: #8e8e8e;
     @media screen and (max-width: $laptop-width) {
       margin-bottom: 15px;
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 1.6;
     }
   }
   &-post-link {
@@ -207,6 +223,7 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 46px;
+    
     &::after {
       content: '';
       display: block;
@@ -249,6 +266,10 @@
       width: 120px;
       height: 120px;
     }
+    @media screen and (max-width: $mobile-width) {
+      width: 80px;
+      height: 80px;
+    }
   }
   &-description {
     width: 50%;
@@ -266,6 +287,11 @@
       font-size: 20px;
       line-height: 30px;
     }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
   }
   &-link {
     text-transform: uppercase;
@@ -279,6 +305,12 @@
       font-size: 20px;
       line-height: 30px;
     }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    
     > span {
       display: inline-block;
       transform: skewX(20deg);
@@ -306,9 +338,16 @@
       font-size: 20px;
       line-height: 30px;
     }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    
     > span {
       display: inline-block;
       transform: skewX(20deg);
+      
     }
     &:link,
     &:visited {
@@ -380,12 +419,20 @@
       font-size: 26px;
       line-height: 1.4;
     }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 22px;
+      line-height: 1.6;
+    }
   }
   &-paragraph {
     margin-bottom: 20px;
     @media screen and (max-width: $laptop-width) {
       font-size: 20px;
       line-height: 30px;
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 1.6;
     }
   }
   &-image-container {
@@ -418,6 +465,10 @@
       font-size: 22px;
       line-height: 1.4;
       padding: 10px 26px;
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 1.6;
     }
     &:link,
     &:visited {

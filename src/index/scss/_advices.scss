@@ -5,7 +5,9 @@
     text-align: center;
     padding-top: 98px;
     padding-bottom: 80px;
-    
+    @media screen and (max-width: $mobile-width) {
+      padding-top: 60px;
+    }
   }
 
   &__main-heading {
@@ -16,6 +18,10 @@
     margin-bottom: 30px;
     @media screen and (max-width: $laptop-width) {
       font-size: 40px;
+      line-height: 1.6;
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 26px;
       line-height: 1.6;
     }
     &::after {
@@ -33,6 +39,9 @@
         #d5d5d5 100%
       );
       margin-top: 20px;
+      @media screen and (max-width: $mobile-width) {
+        width: 80%;
+      }
     }
   }
   &__main-paragraph {
@@ -41,6 +50,10 @@
     @media screen and (max-width: $laptop-width) {
       font-size: 20px;
       line-height: 30px;
+    }
+    @media screen and (max-width: $mobile-width) {
+      font-size: 18px;
+      line-height: 1.6;
     }
   }
 }
@@ -90,6 +103,9 @@
   @media screen and (max-width: $laptop-width) {
     padding: 25px;
   }
+  @media screen and (max-width: $mobile-width) {
+    padding: 15px;
+  }
 }
 
 .advices__heading {
@@ -97,10 +113,15 @@
   letter-spacing: 0.25px;
   line-height: 1.6;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
   @media screen and (max-width: $laptop-width) {
     font-size: 26px;
     line-height: 1.4;
+  }
+  @media screen and (max-width: $mobile-width) {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 8px;
   }
 }
 .advices__date {
@@ -109,12 +130,20 @@
   font-size: 15px;
   line-height: 25px;
   margin-bottom: 10px;
+  @media screen and (max-width: $mobile-width) {
+    margin-bottom: 8px;
+  }
 }
 .advices__paragraph {
   margin-bottom: 20px;
   @media screen and (max-width: $laptop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+  @media screen and (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
   }
 }
 .advices__link {
@@ -135,6 +164,11 @@
     line-height: 1.4;
     padding: 10px 26px;
     letter-spacing: 1px;
+  }
+  @media screen and (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 8px 22px;
   }
   &:link,
   &:visited {
