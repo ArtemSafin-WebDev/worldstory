@@ -7,9 +7,18 @@
     line-height: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    @media screen and (max-width: $small-mobile-width) {
+      font-size: 14px;
+      line-height: 1.6;
+    }
   }
   &__icon {
     fill: white;
     margin-right: 18px;
+    @media screen and (max-width: $small-mobile-width) {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
   }
 }

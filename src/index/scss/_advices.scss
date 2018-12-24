@@ -8,6 +8,9 @@
     @media screen and (max-width: $mobile-width) {
       padding-top: 60px;
     }
+    @media screen and (max-width: $small-mobile-width) {
+      padding-bottom: 40px;
+    }
   }
 
   &__main-heading {
@@ -17,7 +20,7 @@
     line-height: 1.6;
     margin-bottom: 30px;
     @media screen and (max-width: $laptop-width) {
-      font-size: 40px;
+      font-size: 34px;
       line-height: 1.6;
     }
     @media screen and (max-width: $mobile-width) {
@@ -48,10 +51,6 @@
     color: #8e8e8e;
     margin-bottom: 60px;
     @media screen and (max-width: $laptop-width) {
-      font-size: 20px;
-      line-height: 30px;
-    }
-    @media screen and (max-width: $mobile-width) {
       font-size: 18px;
       line-height: 1.6;
     }
@@ -66,13 +65,8 @@
   }
   @media screen and (max-width: $laptop-width) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-  }
-  @media screen and (max-width: $tablet-width) {
-    grid-gap: 20px;
   }
   @media screen and (max-width: $mobile-width) {
-    grid-gap: 20px;
     grid-template-columns: 1fr;
   }
   &-item {
@@ -115,12 +109,10 @@
   text-transform: uppercase;
   margin-bottom: 10px;
   @media screen and (max-width: $laptop-width) {
-    font-size: 26px;
+    font-size: 22px;
     line-height: 1.4;
   }
   @media screen and (max-width: $mobile-width) {
-    font-size: 22px;
-    line-height: 1.4;
     margin-bottom: 8px;
   }
 }

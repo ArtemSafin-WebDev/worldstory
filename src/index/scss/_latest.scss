@@ -52,8 +52,12 @@
     }
     @media screen and (max-width: $tablet-width) {
       font-size: 22px;
-      margin-bottom: 20px;
     }
+    @media screen and (max-width: $small-mobile-width) {
+      font-size: 18px; 
+      margin-bottom: 7px;
+    }
+    
   }
   &-paragraph {
     font-size: 17px;
@@ -85,6 +89,9 @@
       font-size: 16px;
       line-height: 1.6;
     }
+    @media screen and (max-width: $small-mobile-width) {
+      font-size: 14px;
+    }
   }
 
   &-tags-list {
@@ -112,15 +119,8 @@
     border-radius: 15px;
     transition: background-color 0.3s;
     @media screen and (max-width: $laptop-width) {
-      font-size: 18px;
-      line-height: 1.4;
-    }
-    @media screen and (max-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-    @media screen and (max-width: $mobile-width) {
       font-size: 14px;
+      line-height: 1.6;
     }
     &:link,
     &:visited {
@@ -152,6 +152,11 @@
       width: 25px;
       height: 25px;
     }
+    @media screen and (max-width: $small-mobile-width) {
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+    }
   }
   &-divider {
     width: 1px;
@@ -173,13 +178,12 @@
     transition: background-color 0.2s;
     white-space: nowrap;
     @media screen and (max-width: $laptop-width) {
-      font-size: 22px;
-    }
-    @media screen and (max-width: $tablet-width) {
       font-size: 16px;
       line-height: 1.6;
     }
-
+    @media screen and (max-width: $small-mobile-width) {
+      padding: 4px 10px;
+    }
     &:link,
     &:visited {
       color: white;
@@ -223,14 +227,20 @@
   .latest__card-heading {
     font-size: 30px;
     @media screen and (max-width: $laptop-width) {
-      font-size: 36px;
-    }
-    @media screen and (max-width: $tablet-width) {
-      font-size: 28px;
+      font-size: 32px;
     }
     @media screen and (max-width: $mobile-width) {
       font-size: 22px;
       line-height: 1.6;
+    }
+    @media screen and (max-width: $small-mobile-width) {
+      font-size: 18px; 
+    }
+  }
+  .latest__card-icon {
+    display: none;
+    @media screen and (max-width: $mobile-width) {
+      display: block;
     }
   }
   .latest__card-tags-list {

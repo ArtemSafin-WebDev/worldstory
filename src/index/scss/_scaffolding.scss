@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  outline-color: $primary-color;
 }
 
 html {
@@ -42,3 +43,4 @@ body {
   background: $primary-color;
   color: #fff;
 }
+

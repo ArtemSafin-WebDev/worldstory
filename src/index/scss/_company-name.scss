@@ -6,6 +6,10 @@
   color: black;
   white-space: nowrap;
   padding: 22px 0;
+  @media screen and (max-width: $small-mobile-width) {
+    font-size: 26px;
+    line-height: 1.6;
+  }
   &:link,
   &:visited {
     color: black;
