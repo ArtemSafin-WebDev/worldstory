@@ -18,6 +18,7 @@
     border: none;
     flex-wrap: wrap;
     cursor: pointer;
+    outline: none;
     @media screen and (max-width: $mobile-width) {
       display: flex;
     }
@@ -27,17 +28,31 @@
       display: block;
       background-color: black;
       margin-bottom: 8px;
+      transition: opacity .2s ease-in .2s, transform .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      border-radius: 2px;
+      -webkit-font-smoothing: antialiased;
+      outline: 1px solid transparent;
+      backface-visibility: hidden;
       &:last-child {
         margin-bottom: 0;
       }
+      
+    }
+  }
+  &.expanded &__menu-button {
+    
+    span {
+      transition: opacity .3s, transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       &:nth-child(1) {
+        transform: translate3d(0, 12px, 0) rotate(-45deg);
         
       }
       &:nth-child(2) {
-
+        opacity: 0;
       }
       &:nth-child(3) {
-
+        transform: translate3d(0, -12px, 0) rotate(45deg);
+        
       }
     }
   }

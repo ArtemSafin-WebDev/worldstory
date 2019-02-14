@@ -1,4 +1,5 @@
 module.exports = {
+  baseUrl: '',
   pages: {
     index: {
       // entry for the page

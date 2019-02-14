@@ -162,15 +162,7 @@
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    // @media screen and (max-width: $mobile-width) {
-    //   display: grid;
-    //   grid-template-columns: repeat(2, 1fr);
-    //   grid-gap: 5px;
-    // }
-    // @media screen and (max-width: $small-mobile-width) {
-    //   grid-template-columns: 1fr;
-    //   grid-gap: 10px;
-    // }
+    
     @media screen and (max-width: $mobile-width) {
       justify-content: center;
     }
@@ -193,6 +185,7 @@
     transition: color 0.2s;
     display: block;
     width: 100%;
+    transition: background-color .3s;
     @media screen and (max-width: $mobile-width) {
       font-size: 18px;
       font-weight: 700;
@@ -206,6 +199,9 @@
     &:focus,
     &:hover {
       color: $primary-color;
+      @media screen and (max-width: $mobile-width) {
+        background-color: #fff;
+      }
     }
   }
 }

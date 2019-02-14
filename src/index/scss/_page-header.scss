@@ -1,5 +1,8 @@
 .page-header {
   flex-shrink: 0;
   position: relative;
-  z-index: 3000;
+  z-index: 9500;
+  @media screen and (max-width: $mobile-width) {
+    height: 86px;
+  }
 }

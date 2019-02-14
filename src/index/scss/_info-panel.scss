@@ -1,6 +1,9 @@
 .info-panel {
   background-color: $primary-color;
   color: white;
+  @media screen and (max-width: $mobile-width) {
+    display: none;
+  }
   &__content {
     @include container();
     display: flex;
